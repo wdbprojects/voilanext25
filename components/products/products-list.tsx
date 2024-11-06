@@ -3,7 +3,7 @@ import { Product } from "@prisma/client";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import FavoriteToggleBtn from "./FavoriteToggleBtn";
+import FavoriteToggleButton from "./favorite-toggle-button";
 
 const ProductsList = ({ products }: { products: Product[] }) => {
   return (
@@ -28,7 +28,9 @@ const ProductsList = ({ products }: { products: Product[] }) => {
                     />
                   </div>
                   <div className="col-span-3">
-                    <h2 className="text-xl font-semibold capitalize">{name}</h2>
+                    <h2 className="text-2xl font-semibold capitalize">
+                      {name}
+                    </h2>
                     <h4 className="text-lg font-medium italic text-muted-foreground">
                       {company}
                     </h4>
@@ -36,14 +38,14 @@ const ProductsList = ({ products }: { products: Product[] }) => {
                       {description}
                     </p>
                   </div>
-                  <p className="col-span-1 pr-1 text-xl font-bold text-primary md:ml-auto">
+                  <p className="col-span-1 pr-1 text-2xl font-bold text-primary md:ml-auto">
                     {dollarsAmount}
                   </p>
                 </CardContent>
               </Card>
             </Link>
             <p className="z-5 absolute bottom-8 right-8">
-              <FavoriteToggleBtn productId={id} />
+              <FavoriteToggleButton productId={id} />
             </p>
           </article>
         );
