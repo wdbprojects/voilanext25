@@ -11,6 +11,8 @@ import Container from "@/components/layout/container";
 import CartButton from "@/components/cart/cart-button";
 import MenuUser from "@/components/shared/menu-user";
 import SearchInput from "@/components/forms/search-input";
+import { Key } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   //const { theme } = useTheme();
@@ -41,6 +43,11 @@ const Header = () => {
           <DarkMode />
           <CartButton />
           <MenuUser />
+          <Button size="icon" asChild variant="expandIcon">
+            <Link href="/auth/login">
+              <Key />
+            </Link>
+          </Button>
         </div>
       </Container>
     </header>
