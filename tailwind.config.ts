@@ -20,6 +20,18 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: "var(--brand)",
+        pink: {
+          100: "#ffcfd9",
+          200: "#ff9eb4",
+          300: "#ff6e8e",
+          400: "#ff3d69",
+          500: "#ff0d43",
+          600: "#cc0a36",
+          700: "#990828",
+          800: "#66051b",
+          900: "#33030d",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

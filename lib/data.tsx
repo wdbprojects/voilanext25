@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
 import {
+  Cog,
   Group,
   HeartPulse,
   House,
@@ -46,5 +47,11 @@ export const links: NavLink[] = [
     href: "/orders",
     label: "orders",
     icon: <PackageCheck className="mr-2 h-4 w-4" />,
+  },
+  {
+    id: 7,
+    href: "/settings",
+    label: "settings",
+    icon: <Cog className="mr-2 h-4 w-4" />,
   },
 ];

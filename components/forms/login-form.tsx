@@ -17,11 +17,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { LoaderCircle } from "lucide-react";
-import SuccessMessage from "@/components/shared/success-message";
-import ErrorMessage from "@/components/shared/error-message";
 //import { useSearchParams } from "next/navigation";
-import InfoMessage from "../shared/info-message";
 import { loginAction } from "@/actions/auth-actions";
+import AlertComp from "@/components/shared/alert-comp";
 const LoginForm = () => {
   //const searchParams = useSearchParams();
 
@@ -114,9 +112,9 @@ const LoginForm = () => {
           />
           {error || success || info ? (
             <div className="!mt-6 flex flex-col gap-2">
-              <SuccessMessage message={success} />
-              <ErrorMessage message={error} />
-              <InfoMessage message={info} />
+              <AlertComp type="success" title="Success" message={success} />
+              <AlertComp type="destructive" title="Error" message={error} />
+              <AlertComp type="info" title="Info" message={info} />
             </div>
           ) : null}
 
@@ -136,7 +134,9 @@ const LoginForm = () => {
               Reset form
             </Button>
             <Button type="submit" className="w-full" disabled={isPending}>
-              {isPending ? <LoaderCircle className="animate-spin" /> : null}
+              {isPending ? (
+                <LoaderCircle className="mr-1 h-4 w-4 animate-spin" />
+              ) : null}
               <span>Login</span>
             </Button>
           </div>
