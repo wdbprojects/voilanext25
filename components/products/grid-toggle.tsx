@@ -22,7 +22,7 @@ const GridToggle = ({
           router.push(`?layout=grid${searchTerm}`);
         }}
       >
-        <Grid3X3 size={28} />
+        <Grid3X3 size={20} />
       </Button>
       <Button
         variant="outline"
@@ -32,7 +32,7 @@ const GridToggle = ({
           router.push(`?layout=list${searchTerm}`);
         }}
       >
-        <LayoutList className="h-20 w-20" />
+        <LayoutList size={20} />
       </Button>
     </div>
   );
